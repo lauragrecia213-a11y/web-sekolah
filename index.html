@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMB | SMA Fons Vitae 2 Marsudirini Jakarta Utara</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for clean modern vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bg-navy-dark { background-color: #0d233a; }
+        .text-navy-dark { color: #0d233a; }
+        .border-navy-dark { border-color: #0d233a; }
+        .bg-gold-yellow { background-color: #f3b31a; }
+        .text-gold-yellow { color: #f3b31a; }
+        .bg-coral-red { background-color: #e0533c; }
+        .hover-bg-navy { transition: all 0.3s ease; }
+        .hover-bg-navy:hover { background-color: #163a60; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- TOP BAR INFO -->
+    <div class="bg-navy-dark text-white text-xs md:text-sm py-2 px-4 flex flex-wrap justify-between items-center border-b border-gray-700">
+        <div class="flex items-center gap-4 mx-auto md:mx-0">
+            <span class="flex items-center gap-1">
+                <i data-lucide="phone" class="w-4 h-4 text-gold-yellow"></i> 0851 5056 8761
+            </span>
+            <span class="flex items-center gap-1">
+                <i data-lucide="globe" class="w-4 h-4 text-gold-yellow"></i> www.smafonsvitae2.sch.id
+            </span>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+            <span class="bg-yellow-500 text-navy-dark font-bold px-2 py-0.5 rounded text-xs animate-pulse">Akreditasi A</span>
+            <span>Marsudirini Jakarta Utara</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & School Name -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-navy-dark rounded-full flex items-center justify-center text-white font-black text-xl shadow-inner border border-yellow-400">
+                        <!-- Shield shape SVG placeholder for School Logo -->
+                        <svg class="w-8 h-8 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 10.5c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-md md:text-lg font-extrabold text-navy-dark leading-tight tracking-tight">SMA FONS VITAE 2</h1>
+                        <p class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Marsudirini Jakarta Utara</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-6">
+                    <a href="#beranda" class="text-gray-700 hover:text-blue-900 font-semibold text-sm transition-colors">Beranda</a>
+                    <a href="#syarat" class="text-gray-700 hover:text-blue-900 font-semibold text-sm transition-colors">Persyaratan</a>
+                    <a href="#fasilitas" class="text-gray-700 hover:text-blue-900 font-semibold text-sm transition-colors">Fasilitas</a>
+                    <a href="#ekstrakurikuler" class="text-gray-700 hover:text-blue-900 font-semibold text-sm transition-colors">Ekskul</a>
+                    <a href="#kalkulator" class="text-gray-700 hover:text-blue-900 font-semibold text-sm transition-colors flex items-center gap-1">
+                        <i data-lucide="calculator" class="w-4 h-4 text-amber-500"></i> Beasiswa
+                    </a>
+                    <a href="#daftar" class="bg-coral-red hover:bg-red-600 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md transition-all transform hover:scale-105">
+                        Daftar Online
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-navy-dark focus:outline-none">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#beranda" class="block py-2.5 px-4 rounded-lg hover:bg-gray-100 font-medium text-gray-800">Beranda</a>
+            <a href="#syarat" class="block py-2.5 px-4 rounded-lg hover:bg-gray-100 font-medium text-gray-800">Persyaratan</a>
+            <a href="#fasilitas" class="block py-2.5 px-4 rounded-lg hover:bg-gray-100 font-medium text-gray-800">Fasilitas</a>
+            <a href="#ekstrakurikuler" class="block py-2.5 px-4 rounded-lg hover:bg-gray-100 font-medium text-gray-800">Ekskul</a>
+            <a href="#kalkulator" class="block py-2.5 px-4 rounded-lg hover:bg-gray-100 font-medium text-gray-800 flex items-center gap-1">
+                <i data-lucide="calculator" class="w-4 h-4 text-amber-500"></i> Kalkulator Beasiswa
+            </a>
+            <a href="#daftar" class="block text-center mt-4 bg-coral-red hover:bg-red-600 text-white font-bold py-3 rounded-lg shadow-md">
+                Daftar Sekarang (Formulir Gratis)
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative bg-navy-dark text-white min-h-[90vh] flex items-center pt-8 pb-16 overflow-hidden">
+        <!-- Abstract Background Gradients / Elements -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-15" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-yellow-500 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-red-500 rounded-full blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 px-4 py-1.5 rounded-full text-gold-yellow font-semibold text-xs md:text-sm tracking-wide mx-auto lg:mx-0">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-500"></span>
+                        </span>
+                        Sistem Penerimaan Murid Baru (SPMB) TA 2026/2027
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        SIAP MENYAMBUT <br>
+                        <span class="text-gold-yellow drop-shadow-md">MURID BARU!</span>
+                    </h1>
+                    
+                    <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Bergabunglah bersama keluarga besar <strong class="text-white">SMA Fons Vitae 2 Marsudirini Jakarta Utara</strong>. Sekolah dengan peringkat <strong class="text-yellow-400">Akreditasi A</strong> yang berfokus pada keunggulan akademis, karakter mulia, penguasaan teknologi digital, dan kreativitas tanpa batas.
+                    </p>
+
+                    <!-- Fast Feature Highlights -->
+                    <div class="grid grid-cols-3 gap-3 pt-4 max-w-md mx-auto lg:mx-0">
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center backdrop-blur-sm">
+                            <div class="text-2xl md:text-3xl font-extrabold text-gold-yellow">A</div>
+                            <div class="text-[10px] md:text-xs text-gray-300 mt-1 uppercase font-semibold">Akreditasi</div>
+                        </div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center backdrop-blur-sm relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-red-600/30 transform translate-y-full group-hover:translate-y-0 transition-transform"></div>
+                            <div class="relative text-lg md:text-xl font-extrabold text-red-400 uppercase tracking-tighter">Gratis</div>
+                            <div class="relative text-[10px] md:text-xs text-gray-300 mt-1 font-semibold uppercase">Formulir</div>
+                        </div>
+                        <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center backdrop-blur-sm">
+                            <div class="text-2xl md:text-3xl font-extrabold text-gold-yellow">100%</div>
+                            <div class="text-[10px] md:text-xs text-gray-300 mt-1 uppercase font-semibold">Siap Kerja/Kuliah</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
+                        <a href="#daftar" class="bg-coral-red hover:bg-red-600 text-white text-md font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                            <i data-lucide="edit-3" class="w-5 h-5"></i> Mulai Pendaftaran Online
+                        </a>
+                        <a href="#syarat" class="bg-transparent hover:bg-white/10 text-white text-md font-bold px-8 py-4 rounded-xl border-2 border-white/30 hover:border-white transition-all text-center flex items-center justify-center gap-2">
+                            Pelajari Persyaratan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual Element: Interactive Card/Mockup representing registration poster highlight -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-sm bg-white text-gray-900 rounded-3xl shadow-2xl p-6 border-4 border-yellow-400 overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                        <!-- Top Header Card -->
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-navy-dark text-[11px] font-black px-4 py-2.5 rounded-bl-2xl uppercase tracking-wider">
+                            PPDB Online
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+
+                        <div class="text-center pb-4 border-b border-gray-100">
+                            <span class="text-xs font-bold text-coral-red tracking-widest uppercase">Pilihan Terbaik</span>
+                            <h3 class="text-lg font-black text-navy-dark">Mengapa Fons Vitae 2?</h3>
+                        </div>
+
+                        <!-- Mini Interactive List -->
+                        <div class="space-y-4 my-6">
+                            <div class="flex items-start gap-3">
+                                <span class="bg-green-100 p-1.5 rounded-full text-green-600 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-navy-dark">Fasilitas Lengkap & Ber-AC</h4>
+                                    <p class="text-xs text-gray-500">Kelas nyaman, Lab Komputer handal, & Lab Sains modern.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-green-100 p-1.5 rounded-full text-green-600 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-navy-dark">Ekskul Unggulan Kreatif</h4>
+                                    <p class="text-xs text-gray-500">Coding, English Club, Futsal, Basket, Band, & Taekwondo.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-green-100 p-1.5 rounded-full text-green-600 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-navy-dark">Formulir 100% Gratis</h4>
+                                    <p class="text-xs text-gray-500">Tanpa dipungut biaya pendaftaran awal/formulir fisik.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini QR Code Simulation -->
+                        <div class="bg-gray-50 p-4 rounded-2xl flex items-center justify-between border border-gray-100">
+                            <div>
+                                <p class="text-xs font-bold text-navy-dark">Daftar Via WhatsApp?</p>
+                                <p class="text-[11px] text-gray-500">Klik tombol hubungi panitia</p>
+                            </div>
+                            <a href="https://wa.me/6285150568761?text=Halo%20Panitia%20SPMB%20SMA%20Fons%20Vitae%202%2C%20saya%20tertarik%20untuk%20mendaftar." target="_blank" class="bg-[#25D366] text-white p-2.5 rounded-full hover:scale-110 transition-transform">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYARAT PENDAFTARAN SECTION -->
+    <section id="syarat" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Langkah Mudah Masuk SMA</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark mt-4">Syarat & Berkas Pendaftaran</h2>
+                <p class="text-gray-500 mt-2">Pastikan berkas-berkas berikut siap atau dapat Anda susun untuk pendaftaran ulang setelah pengisian formulir online.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Syarat Card 1 -->
+                <div class="bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-navy-dark mb-2">Akta Kelahiran</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Fotokopi Akta Kelahiran resmi dari Dinas Kependudukan dan Catatan Sipil sebanyak 1 lembar.</p>
+                    <span class="absolute right-4 bottom-4 text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors">01</span>
+                </div>
+
+                <!-- Syarat Card 2 -->
+                <div class="bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-navy-dark mb-2">Kartu Keluarga</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Fotokopi Kartu Keluarga (KK) terbaru yang mencantumkan nama calon siswa sebanyak 1 lembar.</p>
+                    <span class="absolute right-4 bottom-4 text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors">02</span>
+                </div>
+
+                <!-- Syarat Card 3 -->
+                <div class="bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-navy-dark mb-2">Surat Permandian</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Fotokopi Surat Permandian atau Surat Keterangan Lahir Baru (khusus bagi calon siswa beragama Katolik/Kristen).</p>
+                    <span class="absolute right-4 bottom-4 text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors">03</span>
+                </div>
+
+                <!-- Syarat Card 4 -->
+                <div class="bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="edit-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-navy-dark mb-2">Formulir Pendaftaran</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Mengisi formulir pendaftaran secara online di bawah ini atau secara offline di sekolah. <strong class="text-coral-red">FREE FORMULIR!</strong></p>
+                    <span class="absolute right-4 bottom-4 text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors">04</span>
+                </div>
+            </div>
+
+            <!-- Checklist Simulator Card -->
+            <div class="mt-12 bg-gradient-to-r from-navy-dark to-[#1a3f65] text-white p-8 rounded-3xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="bg-yellow-500 text-navy-dark font-extrabold text-xs px-3 py-1 rounded-full uppercase">PENTING</span>
+                    <h3 class="text-xl md:text-2xl font-bold mt-3">Persiapan Berkas Anda Sudah Seberapa Jauh?</h3>
+                    <p class="text-gray-300 text-sm mt-1">Gunakan alat ceklist interaktif ini untuk memantau kelengkapan dokumen pendaftaran Anda.</p>
+                </div>
+                <!-- Interactive Checklist Mini Box -->
+                <div class="w-full lg:max-w-md bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 space-y-2 text-sm text-left">
+                    <label class="flex items-center gap-3 cursor-pointer select-none">
+                        <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-500" onchange="updateProgress()">
+                        <span>Fotokopi Akta Kelahiran</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer select-none">
+                        <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-500" onchange="updateProgress()">
+                        <span>Fotokopi Kartu Keluarga (KK)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer select-none">
+                        <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-500" onchange="updateProgress()">
+                        <span>Fotokopi Surat Permandian (Katolik/Kristen)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer select-none">
+                        <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-500" onchange="updateProgress()">
+                        <span>Mengisi Formulir Online</span>
+                    </label>
+                    <div class="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                        <span>Kelengkapan Berkas:</span>
+                        <span id="checklist-progress" class="font-extrabold text-yellow-400 text-right">0% Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BEASISWA CALCULATOR -->
+    <section id="kalkulator" class="py-20 bg-gray-50 border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Information Text -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Kesempatan Terbatas</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark">Kalkulator Estimasi Beasiswa Prestasi</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        SMA Fons Vitae 2 sangat mengapresiasi kerja keras dan bakat luar biasa calon murid. Gunakan simulasi kalkulator ini untuk mengestimasi besaran potongan biaya masuk (Uang Pangkal/DSP) yang bisa Anda dapatkan berdasarkan nilai rata-rata Rapor SMP atau Prestasi Non-Akademik Anda!
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3 text-sm font-semibold text-gray-700">
+                            <span class="p-1 bg-yellow-400 text-navy-dark rounded-full">
+                                <i data-lucide="award" class="w-4 h-4"></i>
+                            </span>
+                            Beasiswa Jalur Akademik (Nilai Rapor)
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-semibold text-gray-700">
+                            <span class="p-1 bg-yellow-400 text-navy-dark rounded-full">
+                                <i data-lucide="trophy" class="w-4 h-4"></i>
+                            </span>
+                            Beasiswa Jalur Prestasi Olahraga, Seni & Sains
+                        </div>
+                        <div class="flex items-center gap-3 text-sm font-semibold text-gray-700">
+                            <span class="p-1 bg-yellow-400 text-navy-dark rounded-full">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </span>
+                            Kompensasi Tambahan bagi Pendaftar Tercepat (Early Bird)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator App Card -->
+                <div class="lg:col-span-6 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                    <h3 class="text-xl font-bold text-navy-dark mb-6 flex items-center gap-2">
+                        <i data-lucide="calculator" class="text-yellow-500"></i> Simulasikan Potongan Anda
+                    </h3>
+                    
+                    <div class="space-y-5">
+                        <!-- Input 1: Rapor Score -->
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Nilai Rata-rata Rapor Terakhir (SMP):</label>
+                            <input type="number" id="rapor-score" min="0" max="100" placeholder="Contoh: 88" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all">
+                            <p class="text-xs text-gray-400 mt-1">Skala 0 - 100</p>
+                        </div>
+
+                        <!-- Input 2: Prestasi Level -->
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Prestasi Non-Akademik Tertinggi:</label>
+                            <select id="prestasi-level" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all">
+                                <option value="0">Tidak Ada / Belum Ada</option>
+                                <option value="1">Juara Tingkat Kecamatan (Emas/Perak/Perunggu)</option>
+                                <option value="2">Juara Tingkat Kota / Kabupaten</option>
+                                <option value="3">Juara Tingkat Provinsi</option>
+                                <option value="4">Juara Tingkat Nasional / Internasional</option>
+                            </select>
+                        </div>
+
+                        <!-- Calculate Action -->
+                        <button onclick="calculateScholarship()" class="w-full bg-navy-dark hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                            Hitung Potongan Beasiswa
+                        </button>
+
+                        <!-- Calculation Output -->
+                        <div id="calculator-result" class="hidden mt-6 p-5 bg-yellow-50 rounded-2xl border border-yellow-200 text-center space-y-2">
+                            <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Estimasi Potongan Uang Pangkal</p>
+                            <h4 id="scholarship-percentage" class="text-3xl font-black text-navy-dark">0%</h4>
+                            <p id="scholarship-note" class="text-xs text-gray-600">Selamat! Anda memenuhi syarat beasiswa khusus.</p>
+                            <p class="text-[10px] text-gray-400 italic pt-2 border-t border-yellow-200/50">*Hasil simulasi ini merupakan estimasi awal. Keputusan akhir dilakukan saat verifikasi berkas asli oleh Panitia PPDB.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS TERSEDIA SECTION -->
+    <section id="fasilitas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Fasilitas Modern</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark mt-4">Sarana & Prasarana Pendukung</h2>
+                <p class="text-gray-500 mt-2">SMA Fons Vitae 2 dilengkapi dengan berbagai fasilitas modern guna menunjang produktivitas dan kenyamanan siswa dalam belajar secara maksimal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fasilitas Card 1 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="snowflake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Ruang Kelas Ber-AC</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Setiap ruang belajar dilengkapi penyejuk udara (AC) yang sejuk untuk fokus maksimal selama pembelajaran.</p>
+                </div>
+
+                <!-- Fasilitas Card 2 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="monitor" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Lab Komputer</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Pusat pembelajaran teknologi, coding, desain grafis, dan ujian mandiri berbasis komputer (ANBK).</p>
+                </div>
+
+                <!-- Fasilitas Card 3 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Perpustakaan Digital</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Akses tak terbatas ke ratusan e-book materi pelajaran, jurnal ilmiah, serta fiksi berkualitas dari gawai Anda.</p>
+                </div>
+
+                <!-- Fasilitas Card 4 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Laboratorium</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Laboratorium terpadu IPA untuk mengamati, meneliti, dan mempraktikkan sains secara nyata.</p>
+                </div>
+
+                <!-- Fasilitas Card 5 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Lapangan Olahraga</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Area luar ruangan yang luas dan representatif untuk olahraga futsal, basket, serta upacara bendera.</p>
+                </div>
+
+                <!-- Fasilitas Card 6 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="coffee" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Kantin Higienis</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Area jajan murid bersih dengan sajian makanan sehat bergizi yang ramah di kantong.</p>
+                </div>
+
+                <!-- Fasilitas Card 7 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="droplet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Toilet Bersih</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Sanitasi yang terjaga kebersihannya di setiap lantai demi menjamin kenyamanan dasar seluruh siswa.</p>
+                </div>
+
+                <!-- Fasilitas Card 8 -->
+                <div class="p-6 bg-gray-50 border border-gray-100 rounded-3xl hover:bg-navy-dark hover:text-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-navy-dark transition-all">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg mb-2">Kegiatan Ekskul</h3>
+                    <p class="text-sm text-gray-500 group-hover:text-gray-300">Wadah aktualisasi bakat kreatif, olahraga, keagamaan, dan intelektual anak muda pasca kelas usai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EKSTRAKURIKULER SECTION WITH FILTER -->
+    <section id="ekstrakurikuler" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Kembangkan Minat Bakat</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark mt-4">Pilihan Ekstrakurikuler Unggulan</h2>
+                <p class="text-gray-500 mt-2">Pilih kegiatan non-akademik favoritmu untuk memupuk prestasi non-akademis serta melatih kerja sama tim.</p>
+            </div>
+
+            <!-- Interactive Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterEkskul('semua')" class="ekskul-filter-btn active bg-navy-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-all shadow-md">Semua Ekskul</button>
+                <button onclick="filterEkskul('sains-tech')" class="ekskul-filter-btn bg-white hover:bg-gray-100 text-gray-700 px-5 py-2 rounded-full font-semibold text-sm transition-all border border-gray-200">Sains & Teknologi</button>
+                <button onclick="filterEkskul('olahraga')" class="ekskul-filter-btn bg-white hover:bg-gray-100 text-gray-700 px-5 py-2 rounded-full font-semibold text-sm transition-all border border-gray-200">Olahraga & Bela Diri</button>
+                <button onclick="filterEkskul('seni-budaya')" class="ekskul-filter-btn bg-white hover:bg-gray-100 text-gray-700 px-5 py-2 rounded-full font-semibold text-sm transition-all border border-gray-200">Seni & Budaya</button>
+                <button onclick="filterEkskul('wajib')" class="ekskul-filter-btn bg-white hover:bg-gray-100 text-gray-700 px-5 py-2 rounded-full font-semibold text-sm transition-all border border-gray-200">Wajib & Karakter</button>
+            </div>
+
+            <!-- Ekskul Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="ekskul-container">
+                <!-- Ekskul 1 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="sains-tech">
+                    <span class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Coding & Informatika</h4>
+                        <p class="text-xs text-gray-500 mt-1">Mengasah logika pemrograman, pembuatan web sederhana, dan penguasaan fondasi digital masa depan.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 2 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="sains-tech">
+                    <span class="p-3 bg-indigo-50 text-indigo-600 rounded-xl">
+                        <i data-lucide="languages" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">English Club</h4>
+                        <p class="text-xs text-gray-500 mt-1">Melatih kefasihan berbicara, berdebat (English debate), presentasi, serta pemahaman literasi Inggris.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 3 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="sains-tech">
+                    <span class="p-3 bg-red-50 text-red-600 rounded-xl">
+                        <i data-lucide="book-marked" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Mandarin Class</h4>
+                        <p class="text-xs text-gray-500 mt-1">Belajar tata bahasa Mandarin dasar yang sangat berguna untuk karier di kancah perdagangan global.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 4 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="olahraga">
+                    <span class="p-3 bg-amber-50 text-amber-600 rounded-xl">
+                        <i data-lucide="trophy" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Futsal</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pembinaan keahlian taktis sepak bola dalam ruangan dan wadah partisipasi kompetisi eksternal.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 5 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="olahraga">
+                    <span class="p-3 bg-orange-50 text-orange-600 rounded-xl">
+                        <i data-lucide="dribbble" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Basket</h4>
+                        <p class="text-xs text-gray-500 mt-1">Mengembangkan kerja sama tim, stamina fisik prima, teknik drible, lay-up, dan shooting bola.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 6 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="olahraga">
+                    <span class="p-3 bg-rose-50 text-rose-600 rounded-xl">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Taekwondo</h4>
+                        <p class="text-xs text-gray-500 mt-1">Seni bela diri untuk menumbuhkan rasa percaya diri, kekuatan motorik kasar, serta teknik pertahanan diri taktis.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 7 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="seni-budaya">
+                    <span class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                        <i data-lucide="music-4" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Band Sekolah</h4>
+                        <p class="text-xs text-gray-500 mt-1">Membentuk kekompakan grup musik, olah vokal, penguasaan gitar, keyboard, bass, drum serta panggung pentas seni.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 8 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="seni-budaya">
+                    <span class="p-3 bg-pink-50 text-pink-600 rounded-xl">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Tari Tradisional</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pelestarian seni budaya tarian adat Nusantara yang kaya, melatih gemulai gerak tubuh & estetika pertunjukan.</p>
+                    </div>
+                </div>
+
+                <!-- Ekskul 9 -->
+                <div class="ekskul-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md" data-category="wajib">
+                    <span class="p-3 bg-teal-50 text-teal-600 rounded-xl">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </span>
+                    <div>
+                        <h4 class="font-bold text-navy-dark text-md">Pramuka</h4>
+                        <p class="text-xs text-gray-500 mt-1">Wadah pembentukan kemandirian mental, kebersamaan bertahan hidup, kepanduan dasar, dan cinta alam tanah air.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULIR PENDAFTARAN ONLINE (THE APP CORE) -->
+    <section id="daftar" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Proses Instan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark mt-4">Formulir Pendaftaran Online</h2>
+                <p class="text-gray-500 mt-2">Isi formulir pendaftaran murid baru secara ringkas di bawah ini tanpa biaya (<strong class="text-coral-red">FREE FORMULIR</strong>).</p>
+            </div>
+
+            <!-- Form Progress bar -->
+            <div class="mb-10 bg-gray-100 rounded-full h-3 max-w-xl mx-auto overflow-hidden relative">
+                <div id="form-progress-bar" class="bg-yellow-500 h-full w-1/3 transition-all duration-300"></div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-100 rounded-3xl shadow-xl overflow-hidden">
+                <!-- Header of Form -->
+                <div class="bg-navy-dark text-white p-6 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-black text-lg">Pendaftaran Calon Siswa Baru</h3>
+                        <p class="text-xs text-gray-300">Harap isi data diri asli dengan cermat.</p>
+                    </div>
+                    <span id="step-badge" class="bg-yellow-400 text-navy-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Langkah 1 dari 3</span>
+                </div>
+
+                <!-- Dynamic Form Container -->
+                <form id="ppdbForm" class="p-8 space-y-6" onsubmit="handleFormSubmit(event)">
+                    
+                    <!-- STEP 1: DATA CALON SISWA -->
+                    <div id="step-1" class="space-y-4">
+                        <h4 class="font-bold text-navy-dark text-md border-b pb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-yellow-400 text-navy-dark text-xs flex items-center justify-center font-bold">1</span>
+                            Identitas Pribadi Calon Siswa
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Lengkap Calon Siswa *</label>
+                                <input type="text" id="siswa-nama" required placeholder="Contoh: Michael Christian" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nomor Induk Siswa Nasional (NISN)</label>
+                                <input type="text" id="siswa-nisn" placeholder="Contoh: 0098765432" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Asal Sekolah (SMP) *</label>
+                                <input type="text" id="siswa-smp" required placeholder="Contoh: SMP Marsudirini" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Tempat Lahir *</label>
+                                <input type="text" id="siswa-tempat-lahir" required placeholder="Contoh: Jakarta" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Tanggal Lahir *</label>
+                                <input type="date" id="siswa-tgl-lahir" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Agama *</label>
+                                <select id="siswa-agama" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                                    <option value="">Pilih Agama</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Kristen Protestan">Kristen Protestan</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">No. Telp / WhatsApp Aktif *</label>
+                                <input type="tel" id="siswa-kontak" required placeholder="Contoh: 0812XXXXXXXX" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: DATA ORANG TUA / WALI -->
+                    <div id="step-2" class="hidden space-y-4">
+                        <h4 class="font-bold text-navy-dark text-md border-b pb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-yellow-400 text-navy-dark text-xs flex items-center justify-center font-bold">2</span>
+                            Identitas Orang Tua / Wali
+                        </h4>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Ayah / Wali *</label>
+                                <input type="text" id="ortu-ayah" required placeholder="Contoh: Antonius Christian" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Ibu Kandung *</label>
+                                <input type="text" id="ortu-ibu" required placeholder="Contoh: Maria Christian" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pekerjaan Utama Orang Tua *</label>
+                                <input type="text" id="ortu-pekerjaan" required placeholder="Contoh: Karyawan Swasta" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">No. HP Orang Tua / Wali *</label>
+                                <input type="tel" id="ortu-kontak" required placeholder="Contoh: 0813XXXXXXXX" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Alamat Lengkap Rumah *</label>
+                            <textarea id="ortu-alamat" required rows="3" placeholder="Contoh: Jl Kramat Jaya No. 10B, Koja, Jakarta Utara" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: MINAT & PERNYATAAN -->
+                    <div id="step-3" class="hidden space-y-4">
+                        <h4 class="font-bold text-navy-dark text-md border-b pb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-yellow-400 text-navy-dark text-xs flex items-center justify-center font-bold">3</span>
+                            Peminatan & Konfirmasi
+                        </h4>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pilihan Konsentrasi Peminatan *</label>
+                                <select id="siswa-peminatan" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                                    <option value="">Pilih Program Peminatan</option>
+                                    <option value="MIPA (Sains)">MIPA (Matematika & Ilmu Pengetahuan Alam)</option>
+                                    <option value="IPS (Sosial)">IPS (Ilmu Pengetahuan Sosial)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ekstrakurikuler yang Diminati *</label>
+                                <select id="siswa-ekskul-pilihan" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-yellow-400 focus:outline-none transition-all text-sm">
+                                    <option value="">Pilih Ekskul Utama</option>
+                                    <option value="Coding">Coding</option>
+                                    <option value="English Club">English Club</option>
+                                    <option value="Mandarin">Mandarin</option>
+                                    <option value="Futsal">Futsal</option>
+                                    <option value="Basket">Basket</option>
+                                    <option value="Taekwondo">Taekwondo</option>
+                                    <option value="Band Sekolah">Band Sekolah</option>
+                                    <option value="Tari Tradisional">Tari Tradisional</option>
+                                    <option value="Pramuka">Pramuka</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-yellow-50 rounded-2xl border border-yellow-200">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <input type="checkbox" required class="mt-1 w-4 h-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-500">
+                                <span class="text-xs text-gray-600 leading-relaxed">
+                                    Saya menyatakan secara sadar bahwa data yang diisi adalah benar milik pribadi calon siswa dan bersedia dihubungi oleh panitia Penerimaan Murid Baru SMA Fons Vitae 2 melalui nomor kontak WhatsApp/Telepon untuk proses penyerahan berkas fisik lanjutan.
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Action Buttons inside Form -->
+                    <div class="flex items-center justify-between pt-6 border-t border-gray-100">
+                        <button type="button" id="prev-btn" onclick="prevStep()" class="hidden px-5 py-2.5 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-100 text-sm font-bold transition-all">
+                            Kembali
+                        </button>
+                        <button type="button" id="next-btn" onclick="nextStep()" class="ml-auto px-6 py-3 rounded-xl bg-navy-dark hover:bg-slate-800 text-white text-sm font-bold transition-all flex items-center gap-1.5 shadow-md">
+                            Lanjut <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <button type="submit" id="submit-btn" class="hidden ml-auto px-8 py-3.5 rounded-xl bg-coral-red hover:bg-red-600 text-white text-sm font-bold transition-all flex items-center gap-1.5 shadow-md">
+                            Kirim Formulir <i data-lucide="check" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Dynamic Success State / "Kartu Bukti" (hidden initially) -->
+                <div id="success-view" class="hidden p-8 text-center space-y-6">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
+                        <i data-lucide="badge-check" class="w-10 h-10"></i>
+                    </div>
+
+                    <div>
+                        <h4 class="text-2xl font-black text-navy-dark">Pendaftaran Berhasil Terkirim!</h4>
+                        <p class="text-sm text-gray-500 mt-1">Terima kasih telah mendaftar di SMA Fons Vitae 2 Marsudirini.</p>
+                    </div>
+
+                    <!-- Printable Virtual Slip -->
+                    <div id="printable-slip" class="max-w-lg mx-auto bg-white border-2 border-dashed border-gray-300 rounded-3xl p-6 text-left space-y-4 shadow-sm relative">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-navy-dark text-[10px] font-extrabold px-2 py-1 rounded">
+                            STATUS: SEMENTARA
+                        </div>
+                        
+                        <div class="border-b pb-3 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-navy-dark text-white rounded-full flex items-center justify-center font-black text-sm">FV</div>
+                            <div>
+                                <h5 class="font-extrabold text-xs text-navy-dark uppercase">SMA FONS VITAE 2 MARSUDIRINI</h5>
+                                <p class="text-[9px] text-gray-400">Bukti Registrasi PPDB Online TA 2026/2027</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase font-semibold">Nomor Registrasi</span>
+                                <span id="slip-reg-number" class="font-bold text-navy-dark">#FV-99120</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase font-semibold">Tanggal Daftar</span>
+                                <span id="slip-date" class="font-bold text-navy-dark">9 Juni 2026</span>
+                            </div>
+                            <div class="col-span-2">
+                                <span class="text-gray-400 text-[10px] block uppercase font-semibold">Nama Calon Siswa</span>
+                                <span id="slip-siswa-nama" class="font-extrabold text-navy-dark text-sm">Michael Christian</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase font-semibold">Program Peminatan</span>
+                                <span id="slip-siswa-peminatan" class="font-bold text-navy-dark">MIPA (Sains)</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 text-[10px] block uppercase font-semibold">Asal Sekolah</span>
+                                <span id="slip-siswa-smp" class="font-bold text-navy-dark">SMP Marsudirini</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini simulated barcode / QR -->
+                        <div class="bg-gray-50 p-3 rounded-xl flex items-center justify-between border border-gray-100 mt-4">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-600">Simpan bukti digital ini!</p>
+                                <p class="text-[9px] text-gray-400 leading-tight">Panitia akan segera memverifikasi kelengkapan berkas Anda.</p>
+                            </div>
+                            <!-- Simple visual placeholder for QR code -->
+                            <div class="w-12 h-12 bg-navy-dark text-white flex items-center justify-center rounded p-1">
+                                <svg viewBox="0 0 100 100" class="w-full h-full fill-current text-white">
+                                    <path d="M0 0h30v10H10v20H0V0zm70 0h30v30h-10V10H70V0zM0 70h10v20h20v10H0V70zm100 0v30H70v-10h20V70h10zM20 20h20v20H20V20zm0 40h20v20H20V60zm40-40h20v20H60V20zm10 50h10v10H70V70zm10 10h10v10H80V80zm-10 10h10v10H70V90z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                        <button onclick="window.print()" class="bg-navy-dark hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="printer" class="w-4 h-4"></i> Cetak Bukti Pendaftaran
+                        </button>
+                        <button onclick="resetPPDBForm()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-6 py-3 rounded-xl text-sm">
+                            Isi Formulir Baru
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="py-20 bg-gray-50 border-t border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full">Tanya Jawab</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy-dark mt-4">Pertanyaan yang Sering Diajukan</h2>
+                <p class="text-gray-500 mt-2">Masih bingung mengenai proses SPMB kami? Temukan jawaban ringkas dari pertanyaan populer di bawah ini.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ item 1 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full text-left p-6 font-bold text-navy-dark text-md flex items-center justify-between focus:outline-none" onclick="toggleFAQ(this)">
+                        <span>Apakah benar pengisian formulir pendaftaran ini 100% Gratis?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        Ya, benar! Berdasarkan brosur resmi SMA Fons Vitae 2 Marsudirini, kami menggratiskan seluruh biaya pengisian formulir pendaftaran awal (FREE FORMULIR). Calon siswa dapat mengisi formulir ini langsung secara mandiri.
+                    </div>
+                </div>
+
+                <!-- FAQ item 2 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full text-left p-6 font-bold text-navy-dark text-md flex items-center justify-between focus:outline-none" onclick="toggleFAQ(this)">
+                        <span>Apa saja persyaratan berkas fisik yang harus dikumpulkan nanti?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        Setelah mengisi formulir online di atas, calon siswa wajib menyerahkan berkas fisik meliputi: Fotokopi Akta Kelahiran (1 lembar), Fotokopi Kartu Keluarga (1 lembar), dan khusus pendaftar Kristen/Katolik menyertakan fotokopi Surat Permandian.
+                    </div>
+                </div>
+
+                <!-- FAQ item 3 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full text-left p-6 font-bold text-navy-dark text-md flex items-center justify-between focus:outline-none" onclick="toggleFAQ(this)">
+                        <span>Bagaimana cara mendaftar beasiswa potongan uang pangkal?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        Kami menyediakan beasiswa potongan uang pangkal/DSP bagi siswa yang memiliki nilai rata-rata Rapor SMP di atas kriteria minimal (jalur akademik) maupun prestasi tingkat daerah (olahraga, seni, dan kepramukaan). Harap lampirkan fotokopi rapor semester terakhir atau sertifikat kejuaraan Anda pada waktu penyerahan dokumen.
+                    </div>
+                </div>
+
+                <!-- FAQ item 4 -->
+                <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full text-left p-6 font-bold text-navy-dark text-md flex items-center justify-between focus:outline-none" onclick="toggleFAQ(this)">
+                        <span>Di mana alamat pasti sekolah dan cara menjangkaunya?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        SMA Fons Vitae 2 berlokasi strategis di Jl Kramat Jaya No.1B, Koja, Jakarta Utara. Lokasi kami sangat mudah diakses menggunakan moda transportasi umum maupun kendaraan pribadi. Peta navigasi Google Maps dapat diakses langsung pada bagian bawah website ini.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT, GOOGLE MAPS & LOCATION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact info details (Koja Address & Map CTA) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-coral-red font-bold text-sm tracking-wider uppercase bg-red-50 px-3 py-1.5 rounded-full font-sans">Kunjungi Kami</span>
+                    <h2 class="text-3xl font-black text-navy-dark tracking-tight">Kontak & Lokasi Sekolah</h2>
+                    <p class="text-gray-500 text-sm">Panitia SPMB siap menyambut kunjungan silaturahmi Anda di sekolah setiap hari kerja (Senin s/d Jumat, Pukul 07.30 - 14.30 WIB).</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="p-2 bg-yellow-100 text-yellow-700 rounded-lg">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-dark">Alamat Resmi</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Jl Kramat Jaya no.1B, Koja, Jakarta Utara, DKI Jakarta</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="p-2 bg-green-100 text-green-700 rounded-lg">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-dark">Hotline WhatsApp (Fast Response)</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">0851 5056 8761</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="p-2 bg-blue-100 text-blue-700 rounded-lg">
+                                <i data-lucide="globe" class="w-5 h-5"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-dark">Website Sekolah & Email</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">info@smafonsvitae2.sch.id / ppdb@smafonsvitae2.sch.id</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Open in Google Maps Button -->
+                    <div class="pt-4">
+                        <a href="https://maps.app.goo.gl/XWVGRz814ix5Y7SSA?g_st=ac" target="_blank" class="inline-flex items-center gap-2 bg-[#4285F4] hover:bg-blue-600 text-white font-extrabold px-6 py-3.5 rounded-xl shadow-md transition-all text-sm">
+                            <i data-lucide="map" class="w-4 h-4"></i> Buka Rute Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Embedded Map Visual Card using user's Maps URL inside visual frame with placeholder coordinate pointer -->
+                <div class="lg:col-span-7">
+                    <div class="bg-gray-100 rounded-3xl p-4 border border-gray-200 shadow-md relative overflow-hidden group">
+                        <div class="absolute top-6 left-6 z-10 bg-white/95 px-4 py-2.5 rounded-xl shadow-md border border-gray-100 flex items-center gap-3">
+                            <div class="w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-xs text-navy-dark">SMA Fons Vitae 2</h5>
+                                <p class="text-[9px] text-gray-400">Jl Kramat Jaya no.1B, Koja, Jakut</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Simple visual map presentation (Static preview with real embed or clean vector design mapping to Koja area) -->
+                        <div class="w-full h-80 rounded-2xl overflow-hidden relative border border-gray-200">
+                            <!-- Utilizing an iframe preview for maps representation since real interactive maps is desired -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0425987114755!2d106.9113886!3d-6.1249722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f80459c381f%3A0xe21406e23b2c6fa5!2sSMA%20Fons%20Vitae%202!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
+                                class="absolute inset-0 w-full h-full border-none" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-dark text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- School Profile on footer -->
+                <div class="md:col-span-5 space-y-4 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3">
+                        <div class="w-10 h-10 bg-white text-navy-dark rounded-full flex items-center justify-center font-black">FV</div>
+                        <h3 class="text-md font-extrabold tracking-wide">SMA FONS VITAE 2 MARSUDIRINI</h3>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-sm mx-auto md:mx-0 leading-relaxed">
+                        Membimbing generasi muda berilmu tinggi, beriman teguh, berbudi luhur, mandiri, kreatif, serta siap menyongsong revolusi digital modern.
+                    </p>
+                    <div class="flex items-center justify-center md:justify-start gap-3 text-xs pt-2">
+                        <span class="bg-yellow-500 text-navy-dark font-black px-2.5 py-1 rounded">Akreditasi A</span>
+                        <span class="text-gray-300">Marsudirini Jakarta Utara</span>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation Links on footer -->
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h4 class="font-extrabold text-sm text-gold-yellow uppercase tracking-wider mb-4">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#syarat" class="hover:text-white transition-colors">Persyaratan</a></li>
+                        <li><a href="#fasilitas" class="hover:text-white transition-colors">Fasilitas Kampus</a></li>
+                        <li><a href="#ekstrakurikuler" class="hover:text-white transition-colors">Pilihan Ekskul</a></li>
+                        <li><a href="#kalkulator" class="hover:text-white transition-colors">Kalkulator Beasiswa</a></li>
+                        <li><a href="#daftar" class="hover:text-white transition-colors">Form Pendaftaran</a></li>
+                    </ul>
+                </div>
+
+                <!-- Info Kontak direct links on footer -->
+                <div class="md:col-span-4 text-center md:text-left">
+                    <h4 class="font-extrabold text-sm text-gold-yellow uppercase tracking-wider mb-4">Layanan SPMB</h4>
+                    <p class="text-xs text-gray-400 mb-2 leading-relaxed">
+                        Silakan hubungi kami apabila mengalami kendala selama proses registrasi pendaftaran online.
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <a href="https://wa.me/6285150568761" class="flex items-center justify-center md:justify-start gap-2 hover:text-green-400 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-green-500"></i> WhatsApp: 0851 5056 8761
+                        </a>
+                        <a href="tel:085150568761" class="flex items-center justify-center md:justify-start gap-2 hover:text-yellow-400 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4 text-yellow-500"></i> Telepon: 0851 5056 8761
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer copyright signature & developer attributes -->
+            <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 SMA Fons Vitae 2 Marsudirini. Hak Cipta Dilindungi.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://maps.app.goo.gl/XWVGRz814ix5Y7SSA?g_st=ac" target="_blank" class="hover:text-white transition-colors">Alamat Google Maps</a>
+                    <span>&bull;</span>
+                    <a href="https://www.smafonsvitae2.sch.id/ppdb/" target="_blank" class="hover:text-white transition-colors">Situs Resmi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MAIN JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Vector Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggling
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close Mobile Menu on Click of a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // 1. BEASISWA CALCULATOR LOGIC
+        function calculateScholarship() {
+            const raporScore = parseFloat(document.getElementById('rapor-score').value);
+            const prestasiLevel = parseInt(document.getElementById('prestasi-level').value);
+            const resultBox = document.getElementById('calculator-result');
+            const percentText = document.getElementById('scholarship-percentage');
+            const noteText = document.getElementById('scholarship-note');
+
+            if (isNaN(raporScore) || raporScore < 0 || raporScore > 100) {
+                alert('Silakan masukkan nilai rapor SMP yang valid (rentang 0 s/d 100).');
+                return;
+            }
+
+            let percentage = 0;
+            let note = "";
+
+            // Calculate based on Rapor Score
+            if (raporScore >= 95) {
+                percentage += 50;
+                note = "Selamat! Nilai Rapor istimewa. Berhak beasiswa akademik emas.";
+            } else if (raporScore >= 90) {
+                percentage += 35;
+                note = "Luar biasa! Berhak potongan beasiswa akademik perak.";
+            } else if (raporScore >= 85) {
+                percentage += 20;
+                note = "Sangat baik! Berhak potongan beasiswa akademik perunggu.";
+            } else if (raporScore >= 80) {
+                percentage += 10;
+                note = "Bagus! Berhak kompensasi potongan prestasi ringan.";
+            }
+
+            // Calculate extra bonus based on non-academic achievements
+            if (prestasiLevel === 4) {
+                percentage += 50; // National/Intl Level
+                note = "Prestasi Nasional/Internasional! Tambahan potongan 50% Uang Pangkal.";
+            } else if (prestasiLevel === 3) {
+                percentage += 30; // Prov Level
+                note = "Prestasi Tingkat Provinsi! Tambahan potongan 30% Uang Pangkal.";
+            } else if (prestasiLevel === 2) {
+                percentage += 15; // City Level
+                note = "Prestasi Tingkat Kota/Kabupaten! Tambahan potongan 15% Uang Pangkal.";
+            } else if (prestasiLevel === 1) {
+                percentage += 5; // District Level
+                note = "Prestasi Tingkat Kecamatan! Tambahan potongan 5% Uang Pangkal.";
+            }
+
+            // Cap percentage at 100%
+            if (percentage > 100) percentage = 100;
+            if (percentage === 0) {
+                note = "Maaf, nilai & prestasi Anda saat ini belum memenuhi kualifikasi beasiswa minimum. Jangan berkecil hati, mari mendaftar segera untuk mendapatkan diskon pendaftar pertama (Early Bird)!";
+            }
+
+            // Reveal result box smoothly
+            resultBox.classList.remove('hidden');
+            percentText.innerText = `${percentage}%`;
+            noteText.innerText = note;
+        }
+
+        // 2. CHECKLIST PROCESS INTERACTION
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('#syarat input[type="checkbox"]');
+            let checkedCount = 0;
+            checkboxes.forEach(box => {
+                if (box.checked) checkedCount++;
+            });
+            
+            const progressPercent = (checkedCount / checkboxes.length) * 100;
+            const progressLabel = document.getElementById('checklist-progress');
+            
+            progressLabel.innerText = `${progressPercent}% Ready`;
+            if (progressPercent === 100) {
+                progressLabel.className = "font-extrabold text-green-400 text-right";
+            } else {
+                progressLabel.className = "font-extrabold text-yellow-400 text-right";
+            }
+        }
+
+        // 3. EKSKUL FILTER LOGIC
+        function filterEkskul(category) {
+            // Update active state of buttons
+            const buttons = document.querySelectorAll('.ekskul-filter-btn');
+            buttons.forEach(btn => {
+                btn.className = "ekskul-filter-btn bg-white hover:bg-gray-100 text-gray-700 px-5 py-2 rounded-full font-semibold text-sm transition-all border border-gray-200";
+            });
+
+            // Set current target active style
+            const activeBtn = event.currentTarget;
+            activeBtn.className = "ekskul-filter-btn active bg-navy-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-all shadow-md";
+
+            const cards = document.querySelectorAll('.ekskul-card');
+            cards.forEach(card => {
+                if (category === 'semua') {
+                    card.classList.remove('hidden');
+                } else {
+                    const cardCat = card.getAttribute('data-category');
+                    if (cardCat === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // 4. MULTI-STEP FORM APPLICATION LOGIC
+        let currentStep = 1;
+
+        function updateFormUI() {
+            const bar = document.getElementById('form-progress-bar');
+            const badge = document.getElementById('step-badge');
+            
+            // Toggle steps visibility
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+            document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+
+            // Update progress bar width
+            if (currentStep === 1) {
+                bar.className = "bg-yellow-500 h-full w-1/3 transition-all duration-300";
+                badge.innerText = "Langkah 1 dari 3";
+                document.getElementById('prev-btn').classList.add('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+                document.getElementById('submit-btn').classList.add('hidden');
+            } else if (currentStep === 2) {
+                bar.className = "bg-yellow-500 h-full w-2/3 transition-all duration-300";
+                badge.innerText = "Langkah 2 dari 3";
+                document.getElementById('prev-btn').classList.remove('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+                document.getElementById('submit-btn').classList.add('hidden');
+            } else if (currentStep === 3) {
+                bar.className = "bg-yellow-500 h-full w-full transition-all duration-300";
+                badge.innerText = "Langkah 3 dari 3";
+                document.getElementById('prev-btn').classList.remove('hidden');
+                document.getElementById('next-btn').classList.add('hidden');
+                document.getElementById('submit-btn').classList.remove('hidden');
+            }
+        }
+
+        function nextStep() {
+            // Simple validation before going to next step
+            if (currentStep === 1) {
+                const nama = document.getElementById('siswa-nama').value;
+                const smp = document.getElementById('siswa-smp').value;
+                const tempat = document.getElementById('siswa-tempat-lahir').value;
+                const tgl = document.getElementById('siswa-tgl-lahir').value;
+                const agama = document.getElementById('siswa-agama').value;
+                const kontak = document.getElementById('siswa-kontak').value;
+
+                if (!nama || !smp || !tempat || !tgl || !agama || !kontak) {
+                    alert('Harap isi semua kolom wajib (*) di Langkah 1.');
+                    return;
+                }
+            } else if (currentStep === 2) {
+                const ayah = document.getElementById('ortu-ayah').value;
+                const ibu = document.getElementById('ortu-ibu').value;
+                const pekerjaan = document.getElementById('ortu-pekerjaan').value;
+                const kontakOrtu = document.getElementById('ortu-kontak').value;
+                const alamat = document.getElementById('ortu-alamat').value;
+
+                if (!ayah || !ibu || !pekerjaan || !kontakOrtu || !alamat) {
+                    alert('Harap isi semua kolom wajib (*) di Langkah 2.');
+                    return;
+                }
+            }
+
+            if (currentStep < 3) {
+                currentStep++;
+                updateFormUI();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateFormUI();
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Extract values to show on dynamic slip
+            const nama = document.getElementById('siswa-nama').value;
+            const smp = document.getElementById('siswa-smp').value;
+            const peminatan = document.getElementById('siswa-peminatan').value;
+
+            // Generate Random Registration Code
+            const randomCode = "FV-" + Math.floor(10000 + Math.random() * 90000);
+            
+            // Set values inside dynamic printable slip
+            document.getElementById('slip-reg-number').innerText = `#${randomCode}`;
+            document.getElementById('slip-siswa-nama').innerText = nama;
+            document.getElementById('slip-siswa-peminatan').innerText = peminatan;
+            document.getElementById('slip-siswa-smp').innerText = smp;
+
+            // Format Current Date
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('slip-date').innerText = today.toLocaleDateString('id-ID', options);
+
+            // Hide Form & show Success State
+            document.getElementById('ppdbForm').classList.add('hidden');
+            document.getElementById('form-progress-bar').parentElement.classList.add('hidden');
+            document.getElementById('step-badge').parentElement.classList.add('hidden');
+            document.getElementById('success-view').classList.remove('hidden');
+        }
+
+        function resetPPDBForm() {
+            // Reset input values
+            document.getElementById('ppdbForm').reset();
+            currentStep = 1;
+
+            // Re-toggle states
+            document.getElementById('ppdbForm').classList.remove('hidden');
+            document.getElementById('form-progress-bar').parentElement.classList.remove('hidden');
+            document.getElementById('step-badge').parentElement.classList.remove('hidden');
+            document.getElementById('success-view').classList.add('hidden');
+
+            updateFormUI();
+        }
+
+        // 5. FAQ ACCORDION LOGIC
+        function toggleFAQ(button) {
+            const body = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            if (body.classList.contains('hidden')) {
+                body.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                body.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
