@@ -1,2 +1,0 @@
-# web-sekolah
-intinya web
